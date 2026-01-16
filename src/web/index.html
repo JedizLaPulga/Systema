@@ -10,6 +10,15 @@
     <header>
         <h1>Welcome to Systema</h1>
         <p>Explore the layers of computing from transistors to cloud systems through interactive visualizations.</p>
+        <nav class="layer-nav">
+            <button class="module-button" data-module="transistors">Transistors</button>
+            <button class="module-button" data-module="logicGates">Logic Gates</button>
+            <button class="module-button" data-module="cpu">CPU</button>
+            <button class="module-button" data-module="memory">Memory</button>
+            <button class="module-button" data-module="operatingSystem">OS</button>
+            <button class="module-button" data-module="networking">Networking</button>
+            <button class="module-button" data-module="cloud">Cloud</button>
+        </nav>
     </header>
     <main>
         <div id="visualization-container">
@@ -19,6 +28,6 @@
     <footer>
         <p>&copy; 2026 Systema. All rights reserved.</p>
     </footer>
-    <script src="scripts/app.ts"></script>
+    <script type="module" src="scripts/app.ts"></script>
 </body>
 </html>
