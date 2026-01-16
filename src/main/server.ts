@@ -1,18 +1,16 @@
-import express from 'express';
+import express, { Application } from 'express';
 import path from 'path';
 
-const app = express();
-const PORT = process.env.PORT || 3000;
+export const createServer = (): Application => {
+    const app = express();
 
-// Serve static files from the web directory
-app.use(express.static(path.join(__dirname, '../web')));
+    // Serve static files from the web directory
+    app.use(express.static(path.join(__dirname, '../web')));
 
-// Handle root requests
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../web/index.html'));
-});
+    // Handle root requests
+    app.get('/', (_req, res) => {
+        res.sendFile(path.join(__dirname, '../web/index.html'));
+    });
 
-// Start the server
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-});
+    return app;
+};

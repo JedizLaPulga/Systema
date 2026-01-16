@@ -1,6 +1,6 @@
 // src/web/scripts/app.ts
 
-import { initializeVisualization } from './components/visualization';
+import { initializeVisualization } from '../components/visualization';
 import { loadTransistors } from './modules/transistors';
 import { loadLogicGates } from './modules/logic-gates';
 import { loadCPU } from './modules/cpu';
