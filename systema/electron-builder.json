@@ -1,0 +1,29 @@
+{
+  "appId": "com.systema.education",
+  "productName": "Systema",
+  "version": "1.0.0",
+  "description": "An interactive educational app that visualizes the layers of computing from transistors to cloud systems.",
+  "main": "src/main/index.ts",
+  "files": [
+    "src/**/*",
+    "package.json",
+    "tsconfig.json"
+  ],
+  "directories": {
+    "buildResources": "assets"
+  },
+  "win": {
+    "target": "nsis",
+    "icon": "assets/icon.ico"
+  },
+  "nsis": {
+    "oneClick": true,
+    "perMachine": true,
+    "allowElevation": true,
+    "runAfterFinish": true
+  },
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  }
+}

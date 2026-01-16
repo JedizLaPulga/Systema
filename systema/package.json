@@ -1,0 +1,36 @@
+{
+  "name": "systema",
+  "version": "1.0.0",
+  "description": "An interactive educational app that visualizes the layers of computing from transistors to cloud systems as interactive, animated modules.",
+  "main": "src/main/index.ts",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "dev": "tsc -w"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.2",
+    "electron": "^16.0.0",
+    "electron-builder": "^22.11.7"
+  },
+  "keywords": [
+    "education",
+    "interactive",
+    "visualization",
+    "computing"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "homepage": "https://github.com/yourusername/systema",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/systema.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/systema/issues"
+  }
+}
