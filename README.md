@@ -30,14 +30,26 @@ Systema is an interactive educational application designed to visualize the laye
    npm install
    ```
 
-### Running the Application
+### Usage
 
-To launch the application, run the following command:
+#### Development
+1. Start the compiler and dev server:
+   ```
+   npm run dev
+   ```
+2. In a separate terminal, launch the application:
+   ```
+   npm start
+   ```
+
+#### Production
+To build and run the production version:
 ```
+npm run build
 npm start
 ```
 
-This will build the application and start a local server. The desktop binary (Windows .exe) can be used to launch the web app in your default browser.
+This will build the application and start the Electron executable. The `npm run package` command (included in `build`) generates the platform-specific installers in the `dist` folder.
 
 ## Usage
 
