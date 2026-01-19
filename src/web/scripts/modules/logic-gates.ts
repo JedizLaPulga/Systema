@@ -52,18 +52,21 @@ class LogicGateVisualizer {
     }
 }
 
-// Example usage
-const visualizer = new LogicGateVisualizer();
-const andGate = new ANDGate();
-andGate.inputs = [true, false];
-visualizer.addGate(andGate);
+// Example usage wrapped in exported function
+export const loadLogicGates = (): void => {
+    console.log('Loading Logic Gates Module');
+    const visualizer = new LogicGateVisualizer();
+    const andGate = new ANDGate();
+    andGate.inputs = [true, false];
+    visualizer.addGate(andGate);
 
-const orGate = new ORGate();
-orGate.inputs = [true, true];
-visualizer.addGate(orGate);
+    const orGate = new ORGate();
+    orGate.inputs = [true, true];
+    visualizer.addGate(orGate);
 
-const notGate = new NOTGate();
-notGate.inputs = [false];
-visualizer.addGate(notGate);
+    const notGate = new NOTGate();
+    notGate.inputs = [false];
+    visualizer.addGate(notGate);
 
-visualizer.visualize();
+    visualizer.visualize();
+};
