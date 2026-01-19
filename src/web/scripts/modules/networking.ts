@@ -35,5 +35,7 @@ export class NetworkingModule {
     }
 }
 
-// Instantiate the NetworkingModule to activate the visualization
-const networkingModule = new NetworkingModule();
+// Instantiate the NetworkingModule to activate the visualization wrapped in exported function
+export const loadNetworking = (): void => {
+    new NetworkingModule();
+};

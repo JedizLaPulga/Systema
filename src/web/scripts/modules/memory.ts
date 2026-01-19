@@ -57,4 +57,6 @@ function visualizeMemory() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', visualizeMemory);
+export const loadMemory = (): void => {
+    visualizeMemory();
+};

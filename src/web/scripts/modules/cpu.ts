@@ -1,7 +1,7 @@
 // src/web/scripts/modules/cpu.ts
 
 class CPU {
-    constructor(private cores: number, private clockSpeed: number) {}
+    constructor(private cores: number, private clockSpeed: number) { }
 
     public getArchitecture(): string {
         return `This CPU has ${this.cores} cores and a clock speed of ${this.clockSpeed} GHz.`;
@@ -18,7 +18,9 @@ class CPU {
     }
 }
 
-// Example usage
-const myCPU = new CPU(8, 3.5);
-console.log(myCPU.getArchitecture());
-myCPU.visualize();
+// Example usage wrapped in exported function
+export const loadCPU = (): void => {
+    const myCPU = new CPU(8, 3.5);
+    console.log(myCPU.getArchitecture());
+    myCPU.visualize();
+};

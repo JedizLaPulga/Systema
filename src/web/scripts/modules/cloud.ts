@@ -41,8 +41,9 @@ export class CloudModule {
         });
     }
 
-    showComponentDetails(componentId) {
+    showComponentDetails(componentId: string) {
         const detailsContainer = document.getElementById('details-container');
+        if (!detailsContainer) return;
         let details = '';
 
         switch (componentId) {
@@ -62,3 +63,7 @@ export class CloudModule {
         detailsContainer.innerHTML = `<p>${details}</p>`;
     }
 }
+
+export const loadCloud = (): void => {
+    new CloudModule();
+};

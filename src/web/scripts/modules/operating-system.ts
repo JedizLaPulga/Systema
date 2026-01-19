@@ -26,7 +26,9 @@ export class OperatingSystem {
     }
 }
 
-// Example usage
-const windowsOS = new OperatingSystem('Windows', '10', ['Multitasking', 'User Interface', 'Security']);
-windowsOS.displayInfo();
-windowsOS.interactiveFeatureDemo();
+// Example usage wrapped in exported function
+export const loadOperatingSystem = (): void => {
+    const windowsOS = new OperatingSystem('Windows', '10', ['Multitasking', 'User Interface', 'Security']);
+    windowsOS.displayInfo();
+    windowsOS.interactiveFeatureDemo();
+};
