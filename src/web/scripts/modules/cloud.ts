@@ -12,6 +12,7 @@ export class CloudModule {
 
     renderCloudOverview() {
         const cloudContainer = document.getElementById('cloud-container');
+        if (!cloudContainer) return;
         cloudContainer.innerHTML = `
             <h2>Cloud Computing Overview</h2>
             <p>Cloud computing allows for on-demand access to a shared pool of configurable computing resources.</p>
